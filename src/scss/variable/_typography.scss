@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'NotoSans';
+  src: url('./src/font/NotoSansMonoCJKjp-Regular.otf');
+}
+$font__noto: 'NotoSans';
+$font__main: $font__noto, 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Meiryo', 'メイリオ', 'ＭＳ Ｐゴシック', 'ＭＳ ゴシック', Osaka, Osaka-等幅, sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__blockquote: "ＭＳ Ｐゴシック";
+$font__line-height-body: 1.5;
+$font__line-height-pre: .7;

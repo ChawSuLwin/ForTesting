@@ -1,0 +1,91 @@
+.widget_posts {
+	margin: 20px 0;
+	padding: 10px;
+	text-align: center;
+	font-size: 1rem;
+
+	h2 {
+		position: relative;
+		display: table;
+		margin: 0 auto;
+		padding: 10px 15px;
+		text-align: center;
+		color: #000000;
+		background-color: rgba(255, 99, 71, 0.4);
+		margin-bottom: 20px;
+		@include respond-to($to-width: 800px) {
+			width: 70%;
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			position: relative;
+			width: calc(100% / 4 - 10px);
+			height: 350px;
+			float: left;
+			margin: 5px 5px 20px;
+			text-align: center;
+			border-radius: 16px;
+			border-style: dotted;
+			border-color: rgba(255, 99, 71, 0.6);
+			background-color: rgba(255, 99, 71,0.3);
+			overflow: hidden;
+			@include respond-to($to-width: 800px) {
+				width:100%;
+				margin: 0 auto 10px;
+			}
+
+			img {
+				width: 50%;
+				height: 30%;
+				margin: 0 auto;
+				margin-top: 20px;
+				transition: all 0.7s ease-in-out;
+			}
+
+			.pop-summary {
+				text-align: left;
+				font-size: 13px;
+			}
+
+			.pop-title {
+   				position: relative;
+				display: table;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+				font-size: 14px solid;
+				padding: 10px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				vertical-align: middle;
+			}
+			.pop-content {
+   				position: relative;
+    			width: 100%;
+   				margin: 0 auto;
+   				overflow: hidden;
+   				font-size: 12px;
+				padding: 10px;
+				text-overflow: ellipsis;
+   				@include respond-to($to-width: 800px) {
+     			display: inline-block;
+    			vertical-align: left;
+    			}
+  			}
+
+			.view-counts {
+				position: absolute;
+				color: rgba(50, 50, 50, 0.7);
+				left: 0;
+				right: 0;
+				bottom: 0;
+   			}
+		}
+	}
+}

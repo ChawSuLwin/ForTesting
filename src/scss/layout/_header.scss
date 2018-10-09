@@ -1,0 +1,12 @@
+.site-header {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  background: rgba(255, 99, 71,0.15);
+  @include respond-to($to-width: 800px) {
+   width: 100%;
+  }   
+}

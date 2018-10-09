@@ -1,0 +1,134 @@
+.site {
+  width: all;
+  margin: 0 auto;
+  overflow: hidden;
+  @include respond-to($to-width: 800px) {
+    width: 100%;
+    padding: 0 1.5%;
+    }
+  .site-content {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #000000;
+    @include respond-to($to-width: 800px) {
+      width: 100%;
+    }
+    .content-area {
+      display: inline-block;
+      position: relative;
+      border-radius: 30px;
+      background-color: rgba(255, 99, 71,0.2);
+      width: 100%;
+      @include respond-to($to-width: 800px) {
+        width: 100%;
+      }
+      h2 {
+      position: relative;
+      text-align: center;
+        
+      }
+      .page-content{
+        width: 100%;
+        margin-left: 15px;
+        margin-bottom: 15px;
+
+        @include respond-to($to-width: 800px) {
+          width: 100%;
+         } 
+      }
+    } 
+    .site-main, .site-main-archive{
+      margin: 0 auto;
+      .top-page{
+        .post{
+          position: relative;
+          width: calc(100% / 3 - 30px);
+          height: 300px;
+          margin: 11px;
+          border-radius: 18px;
+          border-left: 6px solid rgba(255, 99, 71,0.6);
+          background-color: rgba(255, 99, 71,0.25);
+          float: left;
+          padding: 10px;
+          overflow: hidden;
+          @include respond-to($to-width: 800px) {
+            width:100%;
+            height: auto;
+            margin: 15px 0 0;
+        }
+      }
+        .entry-content {
+          width: 100%;
+          margin: 0 auto;
+          @include respond-to($to-width: 800px) {
+            position: relative;
+            bottom: -15px;
+            display: inline-block;
+           }
+          .entry-header {
+            .entry-title {
+              display: table;
+              margin: 0;
+              padding: 10px;
+              text-align: center;
+              font-size: 1rem;
+              color: #000000;
+              @include respond-to($to-width: 800px) {
+                width:100%;
+                height: auto;
+              }
+            }
+              a {
+                font-size: 1.3rem;
+                color: #000000;
+                margin-left: 0;
+                margin-right: 0;
+                text-align: center;
+              }
+          }  
+          .entry-thumbnail {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding: 10px;
+            float: left;
+           /* @include respond-to($to-width: 800px){
+              width: 500px;
+              margin: 0 auto;
+            }*/
+          }  
+          .entry-summary {
+            height: 100px;
+            @include respond-to($to-width: 800px){
+              height: auto;
+            }
+          }
+          .image-large {
+            width: 50%;
+            height: 30%;
+            margin: 0 auto;
+            margin-top: 20px;
+            transition: all 0.7s ease-in-out;
+
+            img { 
+              width: 50%;
+              height: 100px;
+              margin: 0 auto;
+              margin-top: 20px;
+              transition: all 0.7s ease-in-out;
+            }
+          }
+        }
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          height: 110px;
+          border-radius: 10px; 
+        }
+      }
+    }
+  }
+}

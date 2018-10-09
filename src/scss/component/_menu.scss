@@ -1,0 +1,127 @@
+@charset "UTF-8";
+.main-navigation {
+  width: 100%;
+  margin: 0;
+  background-color: rgba(255, 99, 71,0.1); 
+  @include respond-to($to-width: 800px) {
+        width: 100%;
+        padding: 0;
+         
+     }
+  >div{
+        display: table;  
+      }
+  ul {
+    display: none;
+    box-sizing: inherit;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 20px;
+
+    .sub-menu {
+      position: absolute;
+      padding-left: 0;
+      padding-right: 20px;
+      top: 2rem;
+      left: -999px;
+      z-index: 99999;/*
+      box-shadow: 0 3px 3px rgba(255, 99, 71, 0.2);*/
+      @include respond-to($to-width: 800px) {
+        width: 100%;
+        
+      }
+      ul {
+          left: -999px;
+          top: 3rem;
+         }
+      li {    
+        &.focus>ul, &:hover>ul {
+          left: -999px;
+        }
+        &:last-child {
+           a {
+               border-bottom: 0;
+           }
+       }
+      }
+      a {
+        left : 100%;
+        width: 150px;
+        font-size: 10px;
+      }
+      .focus>a, :hover>a {}
+      a.focus, a:hover {}
+    }
+    li.focus>ul, li:hover>ul {
+      left: auto;
+    }
+  }
+  li {
+    position: relative;
+    float: left;
+    margin: 12px;
+    @include respond-to($to-width: 800px) {
+      width: 100%;
+      }
+    &.focus>a, &:hover>a {}
+    }
+  a {
+      display: block;
+      font-size: 11px;
+      color: #000000;
+      padding: 11px;
+      letter-spacing: 1px;
+      background: rgba(255, 99, 71, 0.3);
+      @include respond-to($to-width: 800px) {
+       width: 100%;
+   } 
+    }
+
+  .current-menu-ancestor>a, .current-menu-item>a, .current_page_ancestor>a, .current_page_item>a {
+    color: rgba(255, 99, 71, 0.3);
+  }
+      
+}
+
+/* Small menu. */
+
+.main-navigation.toggled ul, .menu-toggle {
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (min-width: 37.5rem) {
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: inline-block;
+  }
+}
+.comment-navigation, .post-navigation, .posts-navigation {
+    .site-main & {
+      margin: 0 0 1.5rem;
+      overflow: hidden;
+
+  }
+  .nav-previous {   
+    position: relative;
+    float: left;
+    text-align: left;
+    padding: 0;
+    width: 30%;
+    a{
+      color: #000000;
+      text-align: left;
+    }
+  }
+  .nav-next {
+    position: relative;
+    float: right;
+    text-align: right;
+    width: 30%;
+    a{ 
+      color: #000000;
+    }
+  }
+}

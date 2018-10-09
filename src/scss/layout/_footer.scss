@@ -1,0 +1,16 @@
+.site-footer {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  clear: both;
+  .footer-widgets {
+    display: flex;
+    background-color: rgba(255, 99, 71,0.3);
+  }
+}
+  .site-info {
+        width: 1249px;
+        text-align: center;
+        font-size: 20px;
+  }
+

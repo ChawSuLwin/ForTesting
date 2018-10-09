@@ -1,0 +1,25 @@
+.pagination {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+
+    .nav-links {
+        display: inline-block;
+        a {
+            display: inline-block;
+            padding: 7px 15px;
+            color: rgba(285, 0, 0, 0.8);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .current {
+            color: rgba(255, 99, 71, 2);
+            padding: 0 15px;
+            font-weight: bolder;
+            border-radius: 5px;
+            border: 2px solid rgba(265, 79, 81, 3);
+        }
+    }
+}
